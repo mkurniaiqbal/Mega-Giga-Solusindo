@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NavbarCom class="mb-5" />
+    <!-- <NavbarCom class="mb-5" /> -->
     <router-view />
   </div>
 </template>

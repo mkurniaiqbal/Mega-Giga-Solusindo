@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div style="max-width: 30rem" class="m-auto mt-5">
     <b-card
       border-variant="primary"
       header="Login"
