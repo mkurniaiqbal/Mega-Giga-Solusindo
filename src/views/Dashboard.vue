@@ -1,10 +1,12 @@
 <template>
   <div class="container mt-2">
     <div class="d-flex justify-content-between mb-3">
-      <h4 class="my-auto">Daftar Pengguna</h4>
-      <router-link to="/dashboard/create-user" class="navbar-brand">
-        <button class="btn btn-primary btn-sm" type="submit">Tambah</button>
+      <router-link to="/formadd" class="navbar-brand">
+        <button class="btn btn-primary btn-sm" type="submit">
+          Tambah Buku
+        </button>
       </router-link>
+      <input placeholder="search..." />
     </div>
     <table class="table border text-center">
       <thead class="table-info">
@@ -26,7 +28,7 @@
           <td>{{ item.description }}</td>
           <td>
             <router-link
-              :to="{ name: 'updateUserCom', params: { id: item.id } }"
+              :to="{ name: 'formedit', params: { id: item.id } }"
               class="navbar-brand"
             >
               <button type="button" class="btn btn-warning btn-sm me-2">
@@ -49,10 +51,10 @@
 
 <script>
 import axios from "axios";
-import NavbarCom from "../components/NavbarCom.vue";
+import Header from "../components/Header.vue";
 export default {
   components: {
-    NavbarCom,
+    Header,
   },
   onClick: () => {
     this.$router.push("/");
@@ -85,20 +87,6 @@ export default {
       console.log(data);
     },
 
-    // async getData() {
-    //   const token = localStorage.getItem("token");
-    //   const data = axios.get(
-    //     "http://159.223.57.121:8080/books?limit=20&offset=0",
-    //     {
-    //       headers: {
-    //         Authorization: token,
-    //       },
-    //     }
-    //   );
-    //   console.log("ini data", data);
-    //   this.items = await (await data).data;
-    //   console.log(this.items);
-    // },
     async onDelete(id, title) {
       const token = localStorage.getItem("token");
       try {

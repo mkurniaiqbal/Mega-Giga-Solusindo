@@ -1,33 +1,25 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <router-link to="/" class="navbar-brand">Sinau Coding</router-link>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <router-link to="/dashboard" class="nav-link" aria-current="page"
-              >Dashboard</router-link
-            >
-          </li>
-        </ul>
+  <div>
+    <b-navbar toggleable="sm" type="light" variant="success" class="p-4">
+      <div class="container">
+        <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
+
+        <b-navbar-brand>Mega Giga Solusindo</b-navbar-brand>
+
+        <div class="h3">
+          <b-icon icon="person-fill"></b-icon>
+          <b-dropdown id="dropdown-right" right variant="light">
+            <b-dropdown-item>Change Password</b-dropdown-item>
+            <b-dropdown-item>Logout</b-dropdown-item>
+          </b-dropdown>
+        </div>
       </div>
-    </div>
-  </nav>
+    </b-navbar>
+  </div>
 </template>
 
 <script>
-export default {
-  name: "NavbarCom",
-};
+export default {};
 </script>
+
+<style lang="scss" scoped></style>

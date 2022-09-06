@@ -1,14 +1,19 @@
 <template>
   <div id="app">
-    <!-- <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/dashboard">Dashboard</router-link> |
-    </nav> -->
+    <NavbarCom class="mb-5" />
     <router-view />
   </div>
 </template>
 
+<script>
+import NavbarCom from "../src/components/NavbarCom.vue";
+export default {
+  name: "Dashboard",
+  components: {
+    NavbarCom,
+  },
+};
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
